@@ -11,7 +11,8 @@ const CardList = (props) => {
                                  gender={character.gender}
                                  height={character.height}
                                  mass={character.mass}
-                                 hairColor={character.hair_color}/>
+                                 hairColor={character.hair_color}
+                                 />
                     
                 })}
 
