@@ -10,6 +10,7 @@ const Card = (props) => {
             <h2 className='h2'>Height: {props.height}</h2>
             <h2 className='h2'>Mass: {props.mass}</h2>
             <h2 className='h2'>Hair Color: {props.hairColor}</h2>
+            <div className='border'>-</div>
             
             
         </div>
