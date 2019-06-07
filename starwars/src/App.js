@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CardList from './components/CardList';
 import './App.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     this.state = {
       starwarsChars: []
     };
+    // console.log(this.state)
   }
 
   componentDidMount() {
@@ -23,18 +25,24 @@ class App extends Component {
       })
       .then(data => {
         this.setState({ starwarsChars: data.results });
+        console.log(data.results)
       })
       .catch(err => {
         throw new Error(err);
       });
+     
   };
 
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <div className='container'>
+        <CardList characters={this.state.starwarsChars}/>
+        </div>
       </div>
     );
+    
   }
 }
 
